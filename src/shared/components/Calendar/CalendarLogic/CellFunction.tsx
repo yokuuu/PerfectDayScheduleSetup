@@ -72,11 +72,14 @@ const CellFunction = ({ date }: Props) => {
 
     useEffect(() => {
         if (
+            schedule &&
+            schedule.user_schedule &&
+            schedule.user_schedule.user_schedule &&
             schedule.user_schedule.user_schedule[`${date.split('.').join('_')}`]
         ) {
             setIsDayScheduleDone(true)
         }
-    }, [])
+    }, [schedule, date])
 
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const { name, value } = e.target

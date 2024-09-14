@@ -10,6 +10,7 @@ import {
     HiLogin,
     HiOutlineUser,
 } from 'react-icons/hi'
+import { MainLogo } from './index.js'
 
 export function Header() {
     const user = useSelector((state: RootState) => state.data.user.user)
@@ -18,7 +19,7 @@ export function Header() {
             <header className="header">
                 <a className="header__logo-link w--current header__logo-container">
                     <img
-                        // src={require('../../../../public/assets/Images/MainLogo.png')}
+                        src={MainLogo}
                         alt="MainLogo"
                         className="header__logo"
                     />
